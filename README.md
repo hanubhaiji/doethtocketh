@@ -1,42 +1,56 @@
-# ckETH Usage Guide
+# Ethereum to ckETH Bridge
 
-This guide serves to assist you in depositing ETH from Ethereum to the Internet Computer (ICP) using ckETH (wrapped ETH).
+## Overview
+The Ethereum to ckETH Bridge is a decentralized application that facilitates the transfer of Ethereum (ETH) to ckETH, a wrapped version of ETH on the Internet Computer Protocol (ICP). This project aims to create a seamless bridge between Ethereum and ICP, allowing users to deposit ETH and withdraw ckETH through a user-friendly interface.
 
-## Step 1: Wallet Setup
+## Technologies Used
+- **Frontend**: 
+  - Next.js
+  - Tailwind CSS
+  - TypeScript
+  - Ethers.js for Ethereum interactions
+  - @dfinity/agent for ICP integration
 
-### Choosing Your Wallet
-Ensure you have a compatible wallet for both Ethereum and ICP. Recommended wallets are:
-- **MetaMask** for Ethereum
-- **Internet Identity wallet** for ICP
+- **Smart Contracts**:
+  - OpenZeppelin for secure contract implementations
+  - Hardhat for Ethereum contract development and testing
+  - Motoko for developing canisters on the Internet Computer
 
-*Download Links:*
-- [Get MetaMask](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn)
-- [Get ICP Wallet](https://nns.ic0.app/tokens/)
+## Features Implemented
+- **Wallet Connections**: 
+  - Users can connect their Ethereum wallets (e.g., MetaMask) to facilitate transactions.
+  - Users can also connect to the Plug wallet for ICP transactions.
 
-### Creating Your Wallet
-If you are new to cryptocurrency, here’s how to set up your wallet:
-- [MetaMask Setup Guide](https://metamask.io/)
-- [ICP Wallet Setup Guide](https://nns.ic0.app/tokens/)
+- **Deposit Functionality**:
+  - Successfully implemented ETH deposits to a placeholder bridge contract.
+  - Users can specify the amount of ETH to deposit.
 
-## Step 2: Getting ckETH
+- **Withdrawal Functionality**:
+  - Initiated the process to withdraw ckETH from the bridge.
+  - Currently, a placeholder for the ICP canister is used, and error handling for withdrawal has been set up.
 
-### Acquire ETH
-Make sure you have some Ethereum (ETH) available in your wallet. You can purchase ETH from:
-- [Binance](https://binance.com)
-- [Coinbase](https://www.coinbase.com/en-gb/exchange)
-- [Bybit](http://www.bybit.com/)
+## Current Issues
+- **Withdrawal Method Not Found**: The current implementation faces an issue where the withdrawal call to the ICP canister fails due to a missing update method. This will be resolved by implementing the appropriate canister smart contract.
 
-### Convert ETH to ckETH
-To bridge ETH to ckETH, use the ICPSwap platform:
-- [Visit ICPSwap Bridge](https://app.icpswap.com/ck-bridge?tokenId=ss2fx-dyaaa-aaaar-qacoq-cai&chain=Ethereum)
+## Next Steps
+1. **Smart Contract Development**:
+   - Develop the Ethereum smart contract to handle deposits and manage wrapped tokens.
+   - Implement the ICP canister smart contract for handling withdrawals of ckETH.
 
-### Bridging Process
-Follow the provided instructions on ICPSwap to successfully convert your ETH to ckETH.
+2. **Integration and Testing**:
+   - Integrate the smart contracts with the frontend.
+   - Conduct thorough testing on both Ethereum and ICP networks to ensure functionality and security.
 
-## Step 3: Completing the Transaction
+3. **User Interface Enhancements**:
+   - Improve the user interface to provide better user feedback and interactions.
+   - Implement transaction history and loading states for better user experience.
 
-### ICPSwap Guidelines
-Carefully follow the ICPSwap instructions to finalize your transaction.
+4. **Documentation and Deployment**:
+   - Write comprehensive documentation for both the smart contracts and the frontend application.
+   - Deploy the contracts to the respective networks and update the frontend with live contract addresses.
 
-### Verify Your Balance
-After completing the transaction, ensure that your ckETH appears in your ICP wallet.
+## Contributing
+Contributions are welcome! If you have suggestions or improvements, feel free to create an issue or submit a pull request.
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for more details.
